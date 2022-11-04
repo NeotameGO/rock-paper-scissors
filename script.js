@@ -5,7 +5,9 @@ function getComputerChoice() {
 }
 
 function playerSelection(choice) {
-    return choice;
+    let firstLetter = choice[0].toUpperCase();
+    let otherLetters = choice.slice(1,).toLowerCase();
+    return firstLetter + otherLetters;
 }
 
 function game(computer, player) {
@@ -26,4 +28,4 @@ function game(computer, player) {
     }
 }
 
-console.log(game(getComputerChoice(), playerSelection("Rock")));
+console.log(game(getComputerChoice(), playerSelection("rock")));
