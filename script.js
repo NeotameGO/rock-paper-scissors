@@ -4,10 +4,9 @@ function getComputerChoice() {
     return randomItem;
 }
 
-function playerSelection() {
-    var playerChoice = document.getElementById("playerChoice").value;
-    console.log(playerChoice);
-    return playerChoice;
+function playerSelection(choice) {
+    return choice;
 }
 
+console.log(playerSelection("paper"));
 console.log(getComputerChoice());
