@@ -4,4 +4,10 @@ function getComputerChoice() {
     return randomItem;
 }
 
+function playerSelection() {
+    var playerChoice = document.getElementById("playerChoice").value;
+    console.log(playerChoice);
+    return playerChoice;
+}
+
 console.log(getComputerChoice());
