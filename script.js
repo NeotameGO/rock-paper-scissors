@@ -10,7 +10,7 @@ function playerSelection(choice) {
     return firstLetter + otherLetters;
 }
 
-function game(computer, player) {
+function playRound(computer, player) {
     if (computer == "Rock" && player == "Paper") {
        return "You Lose! Paper beats Rock";
     } else if (computer == "Rock" && player == "Scissors") {
