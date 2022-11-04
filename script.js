@@ -8,7 +8,7 @@ function playerSelection() {
     let choice = window.prompt();
     let firstLetter = choice[0].toUpperCase();
     let otherLetters = choice.slice(1,).toLowerCase();
-    return firstLetter + otherLetters;
+    return firstLetter + otherLetters;    
 }
 
 function playRound(computer, player) {
