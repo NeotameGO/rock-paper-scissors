@@ -4,7 +4,8 @@ function getComputerChoice() {
     return randomItem;
 }
 
-function playerSelection(choice) {
+function playerSelection() {
+    let choice = window.prompt();
     let firstLetter = choice[0].toUpperCase();
     let otherLetters = choice.slice(1,).toLowerCase();
     return firstLetter + otherLetters;
@@ -32,7 +33,7 @@ function game() {
     let playerScore = 0;
     let computerScore = 0;
    for (i = 0; i < 5; i++) {
-    let result = playRound(getComputerChoice(), playerSelection("rock"));
+    let result = playRound(getComputerChoice(), playerSelection());
     if (result == "You Win!") {
         playerScore++;
     } else if (result == "You Lose!") {
