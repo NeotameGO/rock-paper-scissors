@@ -9,4 +9,18 @@ function getComputerChoice() {
         return "Scissors"
     }
 }
+
+let choice = prompt("Please type Rock, Paper or Scissors").toLowerCase();
+function getPlayerChoice() {
+    if (choice == "rock") {
+        return "Rock";
+    }else if (choice == "paper") {
+        return "Paper";
+    }else if (choice == "scissors") {
+        return "Scissors"
+    }else {
+        return "Please type Rock, Paper or Scissors"
+    }
+}
 console.log(getComputerChoice())
+console.log(getPlayerChoice())
