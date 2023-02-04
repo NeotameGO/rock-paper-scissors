@@ -4,26 +4,29 @@ while (round < 5) {
         const array = ["Rock", "Paper", "Scissors"];
         let randomNumber = Math.floor(Math.random() * array.length)
         if (randomNumber === 0) {
-            return "Rock";
+            return "Computer: Rock";
         }else if (randomNumber === 1) {
-            return "Paper"
+            return "Computer: Paper"
         }else if (randomNumber === 2) {
-            return "Scissors"
+            return "Computer: Scissors"
         }
     }
 
     let choice = prompt("Please type Rock, Paper or Scissors").toLowerCase();
     function getPlayerChoice() {
-        if (choice == "rock") {
-            return "Rock";
-        }else if (choice == "paper") {
-            return "Paper";
-        }else if (choice == "scissors") {
-            return "Scissors"
-        }else {
-            return "Please type Rock, Paper or Scissors"
+        while (true) {
+            if (choice != "rock" && choice != "paper" && choice != "scissors") {
+                choice = prompt("Please type Rock, Paper or Scissors").toLowerCase();
+            }else if (choice == "rock") {
+                return "Player: Rock";
+            }else if (choice == "paper") {
+                return "Player: Paper";
+            }else if (choice == "scissors") {
+                return "Player:Scissors"
+            }
         }
     }
+        
     round += 1
     console.log(getComputerChoice())
     console.log(getPlayerChoice())
