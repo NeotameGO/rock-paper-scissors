@@ -22,14 +22,37 @@ while (round < 5) {
             }else if (choice == "paper") {
                 return "Player: Paper";
             }else if (choice == "scissors") {
-                return "Player:Scissors"
+                return "Player:Scissors";
             }
+        }
+    }
+
+    function getWinner(computerChoice, playerChoice) {
+        if (computerChoice == "Computer: Rock" && playerChoice == "Player: Rock") {
+            return 0;
+        } else if (computerChoice == "Computer: Rock" && playerChoice == "Player: Paper") {
+            return 2;
+        } else if (computerChoice == "Computer: Rock" && playerChoice == "Player:Scissors") {
+            return 1;
+        } else if (computerChoice == "Computer: Paper" && playerChoice == "Player: Paper") {
+            return 0;
+        } else if (computerChoice == "Computer: Paper" && playerChoice == "Player:Scissors") {
+            return 2;
+        } else if (computerChoice == "Computer: Paper" && playerChoice == "Player: Rock") {
+            return 1;
+        } else if (computerChoice == "Computer: Scissors" && playerChoice == "Player:Scissors") {
+            return 0;
+        } else if (computerChoice == "Computer: Scissors" && playerChoice == "Player: Rock") {
+            return 2;
+        } else if (computerChoice == "Computer: Scissors" && playerChoice == "Player: Paper") {
+            return 1;
         }
     }
         
     round += 1
     console.log(getComputerChoice())
     console.log(getPlayerChoice())
+    console.log(getWinner(getComputerChoice(), getPlayerChoice()))
 }
 
 
