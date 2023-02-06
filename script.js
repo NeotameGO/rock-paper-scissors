@@ -60,3 +60,5 @@ function game() {
         console.log("The game is tied with a score of " + playerScore + " to " + computerScore + ".");
     }   
 }
+
+game();
